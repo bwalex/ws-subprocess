@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="xterm.css"/>
+    <script src="xterm.js"></script>
+  </head>
+  <body>
+    <div id="terminal"></div>
+    <script>
+      var term = new Terminal();
+      var ws = new WebSocket("ws://127.0.0.1:8866/ws?token=abcd");
+      ws.binaryType = "arraybuffer";
+
+      term.open(document.getElementById('terminal'));
+
+      ws.onmessage = function(msg) {
+        if (msg.data instanceof ArrayBuffer) {
+          term.write(String.fromCharCode.apply(null, new Uint8Array(msg.data)));
+        } else {
+          alert(msg.data);
+        }
+      }
+
+      ws.onclose = function(msg) {
+        alert("WebSocket closed!");
+      }
+
+      ws.onerror = function(msg) {
+        alert("WebSocket error!");
+      }
+
+      term.on('data', function(data) {
+        ws.send(new TextEncoder().encode(data))
+      })
+    </script>
+  </body>
+</html>

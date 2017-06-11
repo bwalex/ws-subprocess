@@ -4,6 +4,7 @@
 
 ws-subprocess is a HTTP/websocket server that can run a (verified) command as a process and attach its stdin/stdout/stderr to a websocket connection.
 
+![ws-subprocess example](/screen_nano.png)
 
 ## Get it
 

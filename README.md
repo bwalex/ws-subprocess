@@ -14,11 +14,11 @@ For other platforms or to build from source, clone the repository and just run `
 
 ## Usage
 
-Usage of dist/ws-subprocess:
-  -controller-url string
-    	URL of controller (default "http://127.0.0.1/ws-controller")
-  -listen string
-    	Listen address (default "127.0.0.1:8866")
+    Usage of dist/ws-subprocess:
+      -controller-url string
+        	URL of controller (default "http://127.0.0.1/ws-controller")
+      -listen string
+        	Listen address (default "127.0.0.1:8866")
 
 
 ## Details

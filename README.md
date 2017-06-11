@@ -70,3 +70,8 @@ Run `ws-subprocess` in another shell:
     ws-subprocess -controller-url http://127.0.0.1:5000/ws-controller
 
 Open a browser and point it at http://127.0.0.1:5000 - you should see an xterm.js window with the process visible within it.
+
+
+## License
+
+ws-subprocess is released under the [MIT License](http://www.opensource.org/licenses/MIT).

@@ -4,7 +4,6 @@
 
 ws-subprocess is a HTTP/websocket server that can run a (verified) command as a process and attach its stdin/stdout/stderr to a websocket connection.
 
-![ws-subprocess example](/screen_nano.png)
 
 ## Get it
 
@@ -70,8 +69,9 @@ Run `ws-subprocess` in another shell:
 
     ws-subprocess -controller-url http://127.0.0.1:5000/ws-controller
 
-Open a browser and point it at http://127.0.0.1:5000 - you should see an xterm.js window with the process visible within it.
+Open a browser and point it at http://127.0.0.1:5000 - you should see an xterm.js window with the process visible within it:
 
+![ws-subprocess example](/screen_nano.png)
 
 ## License
 

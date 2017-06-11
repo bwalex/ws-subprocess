@@ -1,0 +1,10 @@
+language: go
+go: 1.7
+script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: qrPeHVISnVC3OfaOCpqzbhCvZ/YLhL/gqhE4gnrAy/HUEf3l3Ftv/KEGkhb09n733s/PCxuROqBOjwsIzpuy4ztak3jRReIXO7u4Euimo76CS2lihLSYsWtDQsBHLUxV3AOjZVxHL14R3fxCX+No9Wj1fAYZPwODciydBtHgyyBi8nTjd2zUB5QcugSkj07gOZ1Z9Z3/8VbxcCktbzQgQwNRSvBVKqzBaKSbui4M3zV0YAboByBjRVvS0KyTlfft7wSMjmGQNPARJ2VHWKeunLbaqD+kbudUhDVCYqejcPRVBm9mUpV2YPQbczf9F9vsumduiflonUdJVkFlfQLmj3cxThcqLfCP9tQoAMg1czS8MtzqMkuSNx/xDYLLXnZT9Y3xyNCattIga55oADJY82gs1/iSFQ/5c8tKsIWOVc4brvw1KgzZU466Ln0kFhbzMZXmPXYtrLWrTyYPC3+czFGc4wNpE257rPnoByu/Td3Zsdm14oB4pu5TyBq6ecD4Y//OAdIRJSQRZR/jXN7iz+R782hvw0yqNGpDoEO9t49srhgZI9FnblXYox59CwHLLSdpektBI1B48yGVSfVrSzcKviuLQ8r1hbHXRBthbPA4HRiqA0Aj/Dfe/26yPIokGceAc+68n8kHj3MeGdXEW5z+iO1sBdsR3j4cp9M6Wu8=
+  file: dist/ws-subprocess
+  on:
+    tags: true
